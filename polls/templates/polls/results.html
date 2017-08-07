@@ -1,0 +1,9 @@
+<h1>{{ result.choice_text }}</h1>
+<ul>
+{% if result %}
+    <li>Do you think {{ result.choice_text }} is the correct answer? <br></li>
+    <a href="{% url 'polls:vote' result.id %}"><font color="red">View votes</font></a>
+{% else %}
+	<h1>The choice has been removed</h1>
+{%endif%}
+</ul>
